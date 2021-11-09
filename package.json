@@ -1,0 +1,23 @@
+{
+  "name": "icttoken",
+  "version": "1.0.0",
+  "description": "Eth Open Zeppelin based smart contract",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "smart-contract",
+    "open-zeppelin",
+    "ICTToken"
+  ],
+  "author": "Khashkhuu 'Xass1on' Gankhuyag",
+  "license": "ISC",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.1.0",
+    "@truffle/hdwallet-provider": "^1.4.0"
+  },
+  "devDependencies": {
+    "@openzeppelin/test-helpers": "github:OpenZeppelin/openzeppelin-test-helpers"
+  }
+}
