@@ -11,6 +11,7 @@ import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 contract MICToken is ERC20, Ownable {
     using SafeMath for uint256;
     TokenTimelock public teamTimelock;
+    TokenTimelock public liquidityTimelock;
 
     uint256 constant _totalSupply = 520000000000;
 
@@ -62,7 +63,12 @@ contract MICToken is ERC20, Ownable {
         _mint(_tokenStrategicReserveAddress, _tokenStrategicReserve * 10**18);
 
         // Liquidity
-        _mint(_tokenLiquidityAddress, _tokenLiquidity * 10**18);
+        liquidityTimelock = new TokenTimelock(
+            this,
+            _tokenLiquidityAddress,
+            block.timestamp + 60 * 60 * 24 * 365 * 10
+        );
+        _mint(address(liquidityTimelock), _tokenLiquidity * 10**18);
 
         // Marketing
         _mint(_tokenMarketingAddress, _tokenMarketing * 10**18);
