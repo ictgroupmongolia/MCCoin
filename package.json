@@ -15,9 +15,21 @@
   "license": "ISC",
   "dependencies": {
     "@openzeppelin/contracts": "^4.1.0",
-    "@truffle/hdwallet-provider": "^1.4.0"
+    "@truffle/hdwallet-provider": "^1.4.0",
+    "truffle-flattener": "github:jplew/truffle-flattener"
   },
   "devDependencies": {
     "@openzeppelin/test-helpers": "github:OpenZeppelin/openzeppelin-test-helpers"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ictgroupmongolia/MCCoin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ictgroupmongolia/MCCoin/issues"
+  },
+  "homepage": "https://github.com/ictgroupmongolia/MCCoin#readme"
 }

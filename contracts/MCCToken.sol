@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.9;
+pragma solidity ^0.8.9;
 
 // Author: Khashkhuu 'Xass1on' Gankhuyag
 
@@ -27,19 +27,19 @@ contract MICToken is ERC20, Ownable {
     string constant _tokenSymbol = "MCC";
 
     address constant _tokenBrandAddress =
-        0x3F35473075Bc28e632a881a19E271C12c7f48c8E;
+        0x2a5a1fb2e243aedaC563d07eC7629FB2eFc92180;
     address constant _tokenOfferAddress =
-        0x3F35473075Bc28e632a881a19E271C12c7f48c8E;
+        0xE502aC45A619d2202e206Cd5968E56033d29f47a;
     address constant _tokenTeamReserveAddress =
-        0xB6Bad08ad4ae5F4b9a6A5f4076C37655D281f37f;
+        0x856b5a3EAAe59109Cc573bcd9fa4ac34714C7264;
     address constant _tokenLoyaltyAddress =
-        0x3340Da47BFf41B85C925Ea840E81a45a84A6a1a1;
+        0x2F03e43d3647cC8E7C173E1C8b8D93A373889997;
     address constant _tokenStrategicReserveAddress =
-        0xb43689fD00b0EC09cc9971741F642519329FE9c4;
+        0x3C2AbcB51Ff25A145B5905def1284bF159916c87;
     address constant _tokenLiquidityAddress =
-        0x36f980FF1719A51EE03c7EDEBfaF74c25E37d65C;
+        0x530D1aCb8896E4f6214Ba6D45C42420aC64A2D39;
     address constant _tokenMarketingAddress =
-        0x36f980FF1719A51EE03c7EDEBfaF74c25E37d65C;
+        0xDadBAF111c24EbB4513FA84f16aeA1595a619FfA;
 
     constructor() ERC20(_tokenName, _tokenSymbol) {
         // Brand
