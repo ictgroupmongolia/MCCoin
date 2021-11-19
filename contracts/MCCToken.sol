@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.9;
+pragma solidity 0.8.9;
 
 // Author: Khashkhuu 'Xass1on' Gankhuyag
 
@@ -13,33 +13,36 @@ contract MICToken is ERC20, Ownable {
     TokenTimelock public teamTimelock;
     TokenTimelock public liquidityTimelock;
 
-    uint256 constant _totalSupply = 520000000000;
+    uint256 constant _totalSupply = 5.2 * 10**11;
 
-    uint256 constant _tokenBrand = 156000000000;
-    uint256 constant _tokenToOffer = 83200000000;
-    uint256 constant _tokenTeamReserve = 20800000000;
-    uint256 constant _tokenLoyalty = 52000000000;
-    uint256 constant _tokenStrategicReserve = 46800000000;
-    uint256 constant _tokenLiquidity = 52000000000;
-    uint256 constant _tokenMarketing = 57200000000;
+    uint256 constant _tokenBrand = 1.56 * 10**11;
+    uint256 constant _tokenToOffer = 8.32 * 10**10;
+    uint256 constant _tokenSecondaryMarket = 5.2 * 10**10;
+    uint256 constant _tokenTeamReserve = 2.08 * 10**10;
+    uint256 constant _tokenLoyalty = 5.2 * 10**10;
+    uint256 constant _tokenStrategicReserve = 4.68 * 10**10;
+    uint256 constant _tokenLiquidity = 5.2 * 10**10;
+    uint256 constant _tokenMarketing = 5.72 * 10**10;
 
     string constant _tokenName = "Mongolia Cashmere Coin";
     string constant _tokenSymbol = "MCC";
 
     address constant _tokenBrandAddress =
-        0x2a5a1fb2e243aedaC563d07eC7629FB2eFc92180;
+        0x1D498C6c475aCcE6B5F006534ED1D88B4810fCeB;
     address constant _tokenOfferAddress =
-        0xE502aC45A619d2202e206Cd5968E56033d29f47a;
+        0x602fCb3Ba09177e16F3cb2e0e68B390F8c6ED097;
+    address constant _tokenSecondaryAddress =
+        0xF45047484C32Ed78cA832E2BBc26eda25B45EAd5;
     address constant _tokenTeamReserveAddress =
-        0x856b5a3EAAe59109Cc573bcd9fa4ac34714C7264;
+        0x3C8485aCB5ed730b8f176F23A01ec594bb063027;
     address constant _tokenLoyaltyAddress =
-        0x2F03e43d3647cC8E7C173E1C8b8D93A373889997;
+        0x891926f9f79268986C6Ce34c4d270d078caEC654;
     address constant _tokenStrategicReserveAddress =
-        0x3C2AbcB51Ff25A145B5905def1284bF159916c87;
+        0x33B634722cc6Fc473e5c57944583fd57db4a21d9;
     address constant _tokenLiquidityAddress =
-        0x530D1aCb8896E4f6214Ba6D45C42420aC64A2D39;
+        0xed94c056b8d7D4a818Be3BeA91AC7FC09a0AB85F;
     address constant _tokenMarketingAddress =
-        0xDadBAF111c24EbB4513FA84f16aeA1595a619FfA;
+        0x1E3150aBfb78E5bae6bD08f3a2b203b751679340;
 
     constructor() ERC20(_tokenName, _tokenSymbol) {
         // Brand
@@ -47,6 +50,9 @@ contract MICToken is ERC20, Ownable {
 
         // IEO
         _mint(_tokenOfferAddress, _tokenToOffer * 10**18);
+
+        // Secondary market
+        _mint(_tokenSecondaryAddress, _tokenSecondaryMarket * 10**18);
 
         // Founders, team and advisors
         teamTimelock = new TokenTimelock(
