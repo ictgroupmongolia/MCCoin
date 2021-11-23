@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.9;
+pragma solidity ^0.8.9;
 
 // Author: Khashkhuu 'Xass1on' Gankhuyag
 
@@ -8,7 +8,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC20/utils/TokenTimelock.sol";
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 
-contract MICToken is ERC20, Ownable {
+contract MCCToken is ERC20, Ownable {
     using SafeMath for uint256;
     TokenTimelock public teamTimelock;
     TokenTimelock public liquidityTimelock;
